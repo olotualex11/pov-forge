@@ -138,11 +138,11 @@ function generateScenes() {
     return;
   }
 
-  const paragraphs = script.split(/\n\s*\n/).filter(p => p.trim().length > 20);
-  const scenes = paragraphs.slice(0, 12).map((para, i) => {
-    const short = para.slice(0, 200).replace(/\n/g, ' ') + (para.length > 200 ? '…' : '');
-    const prompt = `Scene ${i+1}: ${short} — hand-drawn 2D stick-figure illustration, large round-headed young adult character (beige shirt or olive/charcoal shadow version as needed), thin imperfect ink outlines, warm muted earth-tone palette, subtle paper grain, almost empty frame or one simple metaphor prop, expressive body language, soft lighting, quiet cinematic composition, no text`;
-    return `<div class="item"><strong>Scene ${i+1}</strong><br>${short}<div class="prompt">${prompt}</div></div>`;
+  const paragraphs = script.split(/\n\s*\n/).filter(p => p.trim().length > 10);
+  const scenes = paragraphs.slice(0, 40).map((para, i) => {
+    const short = para.slice(0, 160).replace(/\n/g, ' ') + (para.length > 160 ? '…' : '');
+    const prompt = `Beat ${i+1}: ${short} — hand-drawn 2D stick-figure illustration, large round-headed young adult character (beige shirt or olive/charcoal shadow version as needed), thin imperfect ink outlines, warm muted earth-tone palette, subtle paper grain, almost empty frame or one simple metaphor prop, expressive body language, soft lighting, quiet cinematic composition, no text`;
+    return `<div class="item"><strong>Beat ${i+1}</strong><br>${short}<div class="prompt">${prompt}</div></div>`;
   });
 
   output.innerHTML = scenes.join('') || '<p class="item">Could not split into scenes. Try adding blank lines between sections.</p>';
