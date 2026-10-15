@@ -245,6 +245,14 @@ textarea {
   color: var(--accent);
 }
 
+.lib-card .tip {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  border-left: 2px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
 .lib-card ul {
   margin-left: 1.2rem;
   margin-top: 0.5rem;

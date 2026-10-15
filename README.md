@@ -10,7 +10,7 @@ Inspired by channels like Master POV, Mr. POV Explainer, and PsychToons.
 - **Script Builder** — Second-person templates (rank progression + psychology metaphor) with local auto-save
 - **Scene & Prompt Builder** — Break scripts into scenes and generate consistent stick-figure visual prompts
 - **Style Guide** — Locked character and aesthetic prompts for visual consistency
-- **Niche Library** — Insights on what’s working in the POV explainer space
+- **Niche Library** — Main sub-niches under POV Explainer (rank progression, psychology/internal, scenario immersion, status journeys, dark/warning) plus how the Quiet Mirror style adapts to each
 
 All data stays in your browser. No backend, no accounts.
 
