@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POVForge — POV Explainer Workflow Studio</title>
-  <meta name="description" content="The simplest, most unique workflow studio for creating viral POV explainer videos. Psychology visual metaphors, rank progression stories, and consistent stick-figure style prompts.">
-  <meta property="og:title" content="POVForge — POV Explainer Workflow Studio">
-  <meta property="og:description" content="Forge immersive POV explainers with second-person scripts, scene prompts, and locked visual style.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <title>POVForge — PsychToons-Style Psychology Explainers</title>
+  <meta name="description" content="Workflow studio for high-volume stick-figure psychology POV explainers. Script structure, beat prompts, and production system used by channels like PsychToons.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -19,162 +15,112 @@
   <header class="header">
     <div class="logo">POV<span>Forge</span></div>
     <nav class="nav">
-      <a href="#ideas">Ideas</a>
       <a href="#script">Script</a>
-      <a href="#scenes">Scenes</a>
+      <a href="#beats">Beats</a>
       <a href="#style">Style</a>
-      <a href="#library">Library</a>
+      <a href="#production">Production</a>
     </nav>
     <button class="menu-toggle" aria-label="Menu">☰</button>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <p class="eyebrow">POV Explainer Studio</p>
-      <h1>Forge immersive perspectives.<br>One consistent visual language.</h1>
-      <p class="lede">The cleanest workflow for viral POV psychology, rank-progression, and scenario explainers. Second-person scripts, locked stick-figure style, and scene-ready prompts — all in your browser.</p>
-      <div class="hero-actions">
-        <a href="#ideas" class="btn primary">Start forging</a>
-        <a href="#style" class="btn secondary">View style guide</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="ideas" class="section">
-    <div class="section-header">
-      <h2>Idea Generator</h2>
-      <p>Proven title formats drawn from top-performing POV channels.</p>
-    </div>
-    <div class="tool-card">
-      <div class="input-row">
-        <input type="text" id="topicInput" placeholder="Topic — e.g. psychology of solitude, cartel ranks, dark psychology">
-        <select id="formatSelect">
-          <option value="rank">Your Life at Every Level of…</option>
-          <option value="pov">POV: You…</option>
-          <option value="psych">Psychology of People Who…</option>
-          <option value="scenario">What It’s Like to Be…</option>
-        </select>
-        <button class="btn primary" onclick="generateIdeas()">Generate</button>
-      </div>
-      <div id="ideasOutput" class="results"></div>
-    </div>
+    <p class="eyebrow">High-volume stick-figure psychology</p>
+    <h1>Write and produce the PsychToons way.</h1>
+    <p class="lede">Script structure, beat-level prompts, and the exact production system used by the denser psychology stick-figure channels. 200–350 stills. Calm second-person. Status flip.</p>
   </section>
 
   <section id="script" class="section">
     <div class="section-header">
-      <h2>Script Builder</h2>
-      <p>Second-person immersive structure. Auto-saves locally.</p>
+      <h2>Script Structure</h2>
+      <p>How these channels actually write. Calm, intimate, second person. One idea at a time.</p>
     </div>
     <div class="tool-card">
       <div class="button-row">
-        <button class="btn secondary" onclick="loadTemplate('rank')">Rank progression</button>
-        <button class="btn secondary" onclick="loadTemplate('psych')">Psychology metaphor</button>
-        <button class="btn ghost" onclick="clearScript()">Clear</button>
+        <button class="btn primary" onclick="loadTemplate()">Load full template</button>
+        <button class="btn secondary" onclick="clearScript()">Clear</button>
         <button class="btn primary" onclick="exportScript()">Copy script</button>
       </div>
-      <textarea id="scriptEditor" placeholder="Your script will appear here…"></textarea>
+      <textarea id="scriptEditor" placeholder="Template loads here…"></textarea>
     </div>
   </section>
 
-  <section id="scenes" class="section">
+  <section id="beats" class="section">
     <div class="section-header">
-      <h2>Scene & Prompt Builder</h2>
-      <p>Turn a script into production-ready visual prompts (high-volume, PsychToons-style).</p>
+      <h2>Beat & Prompt Builder</h2>
+      <p>Paste a script. Generates high-volume beat prompts (target 200–350 for a full video).</p>
     </div>
     <div class="tool-card">
-      <textarea id="sceneInput" placeholder="Paste your full script here…"></textarea>
-      <button class="btn primary" onclick="generateScenes()">Generate scenes & prompts</button>
-      <div id="scenesOutput" class="results"></div>
+      <textarea id="beatInput" placeholder="Paste your full script here…"></textarea>
+      <button class="btn primary" onclick="generateBeats()">Generate beats & prompts</button>
+      <div id="beatsOutput" class="results"></div>
     </div>
   </section>
 
   <section id="style" class="section">
     <div class="section-header">
-      <h2>Quiet Mirror Style Guide</h2>
-      <p>Locked visual and editing system so every video feels intentional and consistent.</p>
+      <h2>Locked Visual System</h2>
+      <p>Consistent character so 200+ images still look like one series.</p>
     </div>
     <div class="style-grid">
       <div class="style-card">
-        <h3>Character system</h3>
-        <p>Primary figure: large round head, light beige shirt, dark trousers, simple black shoes, thin imperfect ink lines.</p>
-        <p>Shadow self: same figure, darker olive or charcoal shirt, slightly slumped. Appears only in internal conflict.</p>
-        <p>Helper hand: soft outlined hand or arm that approaches but stops short unless the script allows contact.</p>
+        <h3>Character</h3>
+        <p>Large round head. Thin, slightly imperfect ink outlines. Two black-dot eyes, tiny mouth, no nose. Light beige shirt (present self) or olive/charcoal (shadow). Dark trousers. Simple black shoes. Almost empty frame or one simple prop (mirror, clenched fist, closed door, bridge).</p>
       </div>
       <div class="style-card">
-        <h3>Color language</h3>
-        <p>Beige shirt = present self<br>Olive / charcoal = shadow or protective pattern<br>Terracotta accent = emotional heat or decision point<br>Soft paper background with faint grain — never pure white, never busy environments.</p>
-      </div>
-      <div class="style-card">
-        <h3>Master prompt prefix</h3>
-        <pre id="stylePrompt">hand-drawn 2D stick-figure illustration, large round-headed young adult character, thin slightly imperfect ink outlines, simple facial features, expressive body language, warm muted earth-tone palette, subtle paper grain, flat illustrated environments or almost empty frame, intelligent editorial aesthetic, cinematic but quiet composition, soft atmospheric lighting, emotionally meaningful pose, no text, no photorealism, no 3D, no anime</pre>
-        <button class="btn primary" onclick="copyStyle()">Copy style prompt</button>
-      </div>
-      <div class="style-card">
-        <h3>Editing approach (PsychToons-style)</h3>
-        <p><strong>High-volume stills + light motion.</strong> Target 200–350 images for a 12–16 min video.</p>
-        <ul>
-          <li>One still per short beat of the script (roughly every 2–5 seconds)</li>
-          <li>Hold most frames 2–5 seconds; occasional 6–8s on key poses</li>
-          <li>Add slow 102–105% scale or gentle drift to every still</li>
-          <li>Cut frequently, timed to the voiceover</li>
-          <li>Status-flip: clean cut from shadow figure to primary on the same composition</li>
-          <li>Almost-touch hands held a beat longer</li>
-          <li>Music very low or none; subtle paper or breath texture only</li>
-          <li>Captions: one short clause, large, bottom third</li>
-        </ul>
-        <p class="tip">This is the denser cut style used by the higher-performing stick-figure psychology channels. The Scene Builder is set up to generate the volume of prompts you need.</p>
+        <h3>Master prompt</h3>
+        <pre id="stylePrompt">minimalist hand-drawn 2D stick-figure illustration, large round head, thin slightly imperfect black ink outlines, two black-dot eyes, tiny mouth, light beige or olive/charcoal shirt, dark trousers, simple black shoes, warm muted earth tones, subtle paper grain, almost empty white-to-paper background or one simple metaphor prop, quiet editorial composition, soft lighting, no text, no photorealism, no 3D, no anime</pre>
+        <button class="btn primary" onclick="copyStyle()">Copy prompt</button>
       </div>
     </div>
   </section>
 
-  <section id="library" class="section">
+  <section id="production" class="section">
     <div class="section-header">
-      <h2>Niche Library</h2>
-      <p>The main lanes under POV Explainer and how the Quiet Mirror style adapts to each.</p>
+      <h2>How They Actually Produce It</h2>
     </div>
     <div class="library-grid">
       <div class="lib-card">
-        <h3>Rank / Level Progression</h3>
-        <p>Master POV style. “Your life at every level of [career, status, underworld, military].” 15–30 min, slow build with sensory detail and the emotional cost of each rank.</p>
-        <p class="tip"><strong>Style shift:</strong> More physical sensory detail per level. Shadow figure appears at the price of each rank. Longer holds on the cost moments.</p>
+        <h3>Script rules</h3>
+        <ul>
+          <li>Title sells identity upgrade, not a lecture</li>
+          <li>Hook names the private behavior in the first 10–25 seconds</li>
+          <li>Treat the flaw as an adaptive strategy, then flip it into a rare advantage</li>
+          <li>2–4 named research beats, spoken in plain language</li>
+          <li>3–5 concrete rules at the end</li>
+          <li>Calm adult voice, short sentences, second person</li>
+        </ul>
       </div>
       <div class="lib-card">
-        <h3>Psychology / Internal POV</h3>
-        <p>PsychToons and Mind’s Eye style. Explaining a private behavior, bias, or emotional pattern from inside it. 8–16 min, calm, metaphor-heavy reframe.</p>
-        <p class="tip"><strong>Style shift:</strong> Heavier metaphor props (mirror, clenched fist, closed door). Shadow figure more present. The status-flip cut is the key edit.</p>
+        <h3>Visual & editing</h3>
+        <ul>
+          <li>200–350 stills for a 12–16 minute video</li>
+          <li>One still per short beat (roughly every 2–5 seconds)</li>
+          <li>Light motion only: slow 102–105% scale or gentle drift</li>
+          <li>Frequent cuts timed to the voiceover</li>
+          <li>Almost no text on the image (max 4–5 words if any)</li>
+          <li>Captions: large, one short clause at a time</li>
+          <li>Music very low or none</li>
+        </ul>
       </div>
       <div class="lib-card">
-        <h3>Scenario / Role Immersion</h3>
-        <p>Mr. POV Explainer style. “POV: You are [extreme role]” — cartel accountant, deep cover, black-hat, evidence destroyer. 10–20 min, tension + process.</p>
-        <p class="tip"><strong>Style shift:</strong> Process-focused (hands doing the work). Fewer emotional metaphors. Keep the quiet pacing so it doesn’t feel like generic action stickman content.</p>
-      </div>
-      <div class="lib-card">
-        <h3>Status / Everyday Journey</h3>
-        <p>Climbing fame, money, skill, or social rank with the psychological cost attached. Medium-long and reflective.</p>
-        <p class="tip"><strong>Style shift:</strong> Mix of rank structure + psychology layer. Shadow figure tracks the internal price of external progress.</p>
-      </div>
-      <div class="lib-card">
-        <h3>Dark / Warning POV</h3>
-        <p>Dark psychology, manipulation, or toxic patterns explained from the inside. Shorter to medium, cautionary. Use sparingly.</p>
-        <p class="tip"><strong>Style shift:</strong> Shadow figure dominates longer. Terracotta used sparingly for the decision point. Keep the educational disclaimer clear.</p>
-      </div>
-      <div class="lib-card">
-        <h3>Recommended starting structure</h3>
-        <p><strong>Central concept:</strong> Experience it. Understand it.</p>
-        <p><strong>Pillar 1 — Human Psychology (≈50%)</strong><br>POV: You Always Feel Guilty When You Say No. / You Would Rather Struggle Than Ask for Help.</p>
-        <p><strong>Pillar 2 — Power, Work & Money (≈30%)</strong><br>POV: You Become the Most Competent Person Nobody Notices. / Promotion changes how people treat you.</p>
-        <p><strong>Pillar 3 — Hypothetical Worlds (≈20%)</strong><br>Only scenarios that still explore behavior or status (social scores, AI taking jobs, money becoming worthless).</p>
-        <p class="tip">Start here. Test 6–9 videos across these three related pillars before expanding further. Keep narration, visual style, and structure consistent.</p>
+        <h3>Workflow order</h3>
+        <ol>
+          <li>Pick one trait or private behavior</li>
+          <li>Write the title as a status reversal</li>
+          <li>Write the hook before the research</li>
+          <li>Add 2–4 real studies</li>
+          <li>Write 3–5 named rules</li>
+          <li>Break into 200+ beats</li>
+          <li>Generate every frame from the same locked prompt</li>
+          <li>Calm voiceover</li>
+          <li>Edit with light motion + frequent cuts</li>
+        </ol>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-inner">
-      <div class="logo">POV<span>Forge</span></div>
-      <p>Built for creators who make psychology and perspective feel personal. All data stays in your browser.</p>
-      <p class="small">Inspired by Master POV, Mr. POV Explainer & PsychToons</p>
-    </div>
+    <p>POVForge — Built for the high-volume stick-figure psychology format.</p>
   </footer>
 
   <script src="app.js"></script>
