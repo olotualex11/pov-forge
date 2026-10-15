@@ -1,6 +1,6 @@
 # POVForge
 
-A unique, browser-based workflow studio for creating POV explainer videos — especially psychology visual metaphors, rank/level progression stories, and immersive second-person scenarios.
+A polished, browser-based workflow studio for creating POV explainer videos — psychology visual metaphors, rank/level progression stories, and immersive second-person scenarios.
 
 Inspired by channels like Master POV, Mr. POV Explainer, and PsychToons.
 
@@ -14,14 +14,30 @@ Inspired by channels like Master POV, Mr. POV Explainer, and PsychToons.
 
 All data stays in your browser. No backend, no accounts.
 
+## Live site
+
+Once GitHub Pages is enabled, the site will be available at:
+
+**https://olotualex11.github.io/pov-forge/**
+
+## How to enable GitHub Pages
+
+1. Go to the repository: https://github.com/olotualex11/pov-forge
+2. Click **Settings** → **Pages**
+3. Under **Build and deployment** → **Source**, select **Deploy from a branch**
+4. Branch: `main` / Folder: `/ (root)`
+5. Click **Save**
+
+The site will be live in under a minute.
+
 ## How to use
 
-1. Open `index.html` in a browser (or host it anywhere).
+1. Open the live site (or `index.html` locally).
 2. Generate ideas → write or load a script template → break into scenes with prompts.
 3. Use the style prompt as a prefix for image generation to keep characters consistent.
 4. Follow the checklist in the Library for the full production path.
 
-## Niche Notes
+## Niche notes
 
 Popular approaches observed:
 - Rank/level second-person immersion (long-form, high retention)
@@ -29,7 +45,3 @@ Popular approaches observed:
 - Strong hooks + emotional reframes
 
 Built to simplify the full cycle from idea to production-ready prompts while staying visually unique.
-
-## Deploy
-
-Static site. Works with GitHub Pages, Netlify, or any static host. Just push and enable Pages on the root or `/docs` if preferred.

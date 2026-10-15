@@ -1,13 +1,18 @@
-// Local storage keys
 const SCRIPT_KEY = 'povforge_script';
 
-// Load saved script
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem(SCRIPT_KEY);
   if (saved) document.getElementById('scriptEditor').value = saved;
+
+  // Mobile menu
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  }
 });
 
-// Auto-save script
 document.getElementById('scriptEditor').addEventListener('input', (e) => {
   localStorage.setItem(SCRIPT_KEY, e.target.value);
 });
@@ -52,7 +57,7 @@ function generateIdeas() {
     ];
   }
 
-  output.innerHTML = ideas.map(i => `<div class="idea">${i}</div>`).join('');
+  output.innerHTML = ideas.map(i => `<div class="item">${i}</div>`).join('');
 }
 
 function capitalize(str) {
@@ -129,19 +134,18 @@ function generateScenes() {
   const script = document.getElementById('sceneInput').value.trim();
   const output = document.getElementById('scenesOutput');
   if (!script) {
-    output.innerHTML = '<p>Paste a script first.</p>';
+    output.innerHTML = '<p class="item">Paste a script first.</p>';
     return;
   }
 
-  // Simple split by double newlines or numbered levels
   const paragraphs = script.split(/\n\s*\n/).filter(p => p.trim().length > 20);
   const scenes = paragraphs.slice(0, 12).map((para, i) => {
-    const short = para.slice(0, 180).replace(/\n/g, ' ') + '...';
+    const short = para.slice(0, 200).replace(/\n/g, ' ') + (para.length > 200 ? '…' : '');
     const prompt = `Scene ${i+1}: ${short} — hand-drawn 2D stick-figure illustration, large round-headed young adult character in light beige shirt and dark trousers, thin imperfect ink outlines, warm muted earth-tone palette, subtle paper grain, expressive body language matching the emotion, soft atmospheric lighting, cinematic composition, no text`;
-    return `<div class="scene"><strong>Scene ${i+1}</strong><br>${short}<br><br><em>Visual Prompt:</em><br>${prompt}</div>`;
+    return `<div class="item"><strong>Scene ${i+1}</strong><br>${short}<div class="prompt">${prompt}</div></div>`;
   });
 
-  output.innerHTML = scenes.join('') || '<p>Could not split into scenes. Try adding blank lines between sections.</p>';
+  output.innerHTML = scenes.join('') || '<p class="item">Could not split into scenes. Try adding blank lines between sections.</p>';
 }
 
 function copyStyle() {
