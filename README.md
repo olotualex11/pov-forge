@@ -1,6 +1,6 @@
 # POVForge
 
-Focused workflow studio for high-volume stick-figure psychology explainers (PsychToons style).
+Focused workflow studio for high-volume stick-figure psychology explainers (analyst-style production).
 
 ## What it covers
 
