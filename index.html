@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POVForge — POV Explainer Workflow Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">POV<span>Forge</span></div>
+    <nav>
+      <a href="#ideas">Ideas</a>
+      <a href="#script">Script</a>
+      <a href="#scenes">Scenes</a>
+      <a href="#style">Style</a>
+      <a href="#library">Library</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Forge Immersive POV Explainers</h1>
+    <p>The simplest, most unique workflow for creating viral POV psychology, rank-progression, and scenario explainer videos — stick-figure visual metaphors included.</p>
+    <div class="hero-stats">
+      <div>Inspired by Master POV, Mr. POV Explainer & PsychToons</div>
+      <div>Second-person scripts • Consistent characters • Scene prompts</div>
+    </div>
+  </section>
+
+  <section id="ideas" class="tool-section">
+    <h2>Idea Generator</h2>
+    <p>Generate titles in proven POV formats.</p>
+    <div class="input-group">
+      <input type="text" id="topicInput" placeholder="e.g. dark psychology of overthinking, cartel ranks, psychology of solitude">
+      <select id="formatSelect">
+        <option value="rank">Your Life at Every Level of...</option>
+        <option value="pov">POV: You...</option>
+        <option value="psych">Psychology of People Who...</option>
+        <option value="scenario">What It’s Like to Be...</option>
+      </select>
+      <button onclick="generateIdeas()">Generate Ideas</button>
+    </div>
+    <div id="ideasOutput" class="output"></div>
+  </section>
+
+  <section id="script" class="tool-section">
+    <h2>Script Builder</h2>
+    <p>Structured second-person immersive script. Edit freely. Auto-saves locally.</p>
+    <div class="script-controls">
+      <button onclick="loadTemplate('rank')">Rank Progression Template</button>
+      <button onclick="loadTemplate('psych')">Psychology Metaphor Template</button>
+      <button onclick="clearScript()">Clear</button>
+    </div>
+    <textarea id="scriptEditor" placeholder="Your script will appear here..."></textarea>
+    <button onclick="exportScript()">Copy Script</button>
+  </section>
+
+  <section id="scenes" class="tool-section">
+    <h2>Scene & Prompt Builder</h2>
+    <p>Paste script → break into scenes + visual prompts in your stick-figure style.</p>
+    <textarea id="sceneInput" placeholder="Paste your full script here..."></textarea>
+    <button onclick="generateScenes()">Generate Scenes & Prompts</button>
+    <div id="scenesOutput" class="output"></div>
+  </section>
+
+  <section id="style" class="tool-section">
+    <h2>Consistent Style Guide</h2>
+    <div class="style-card">
+      <h3>Core Character</h3>
+      <p>Young adult stick-figure: large round head, light beige shirt, dark trousers, simple black shoes. Thin slightly imperfect ink outlines. Warm muted earth-tone palette. Paper grain + watercolor texture.</p>
+      <h3>Master Prompt Prefix</h3>
+      <pre id="stylePrompt">hand-drawn 2D stick-figure illustration, large round-headed young adult character, thin slightly imperfect ink outlines, simple facial features, expressive body language, warm muted earth-tone palette, subtle paper grain and watercolor texture, flat illustrated environments, intelligent editorial illustration aesthetic, cinematic composition, soft atmospheric lighting, emotionally meaningful poses, no text, no photorealism, no 3D</pre>
+      <button onclick="copyStyle()">Copy Style Prompt</button>
+    </div>
+  </section>
+
+  <section id="library" class="tool-section">
+    <h2>Niche Library & Insights</h2>
+    <div class="library-grid">
+      <div class="card">
+        <h3>Rank / Level Progression</h3>
+        <p>Master POV style: "Your Life at Every Level of [X]". Second-person, 8–12 levels, cinematic daily life details, emotional arc from struggle to mastery or revelation. Strong for careers, underworld, military, fame.</p>
+      </div>
+      <div class="card">
+        <h3>Stick-Figure Psychology</h3>
+        <p>PsychToons / Mr. POV Explainer: Visual metaphors for identity, solitude, hidden emotions, reluctance to accept help. Consistent character, slow deliberate animation, calm narration. High retention on reframing personal traits as advantages.</p>
+      </div>
+      <div class="card">
+        <h3>Workflow Checklist</h3>
+        <ul>
+          <li>Viral title research</li>
+          <li>Second-person script (hook → levels/scenes → close)</li>
+          <li>Scene breakdown + style-matched prompts</li>
+          <li>Consistent image gen</li>
+          <li>AI voiceover</li>
+          <li>Animate + captions + music</li>
+          <li>Thumbnail matching visual style</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>POVForge — Built for creators who make psychology and perspective feel personal. All data stays in your browser.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
